@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/msys64/home/SDL2Proy/Piano/engine/core/Game.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/engine/core/Game.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/engine/core/Game.cpp.obj.d"
   "C:/msys64/home/SDL2Proy/Piano/engine/core/Window.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/engine/core/Window.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/engine/core/Window.cpp.obj.d"
   "C:/msys64/home/SDL2Proy/Piano/engine/graphics/TextRenderer.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/TextRenderer.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/TextRenderer.cpp.obj.d"
+  "C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/BotonRectangular.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj.d"
+  "C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/Rectangle.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj.d"
   "C:/msys64/home/SDL2Proy/Piano/game/MainGame.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj.d"
   "C:/msys64/home/SDL2Proy/Piano/game/States/MenuState.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj.d"
   "C:/msys64/home/SDL2Proy/Piano/game/States/PauseState.cpp" "CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj" "gcc" "CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj.d"

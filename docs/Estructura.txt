@@ -11,6 +11,8 @@ ProyectoBaseSDL2/
 │   │
 │   ├── ecs/              # Sistema Entity-Component-System (opcional para proyectos grandes)
 │   ├── graphics/         # Subsistema gráfico
+|   |   ├── shapes/         # formas
+|   |   |   ├── 
 │   │   ├── TextureManager.hpp
 │   │   ├── TextureManager.cpp
 │   │   ├── Sprite.hpp

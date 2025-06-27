@@ -80,12 +80,12 @@ clean: CMakeFiles/ProyectoBaseSDL2.dir/clean
 CMakeFiles/ProyectoBaseSDL2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target ProyectoBaseSDL2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target ProyectoBaseSDL2"
 .PHONY : CMakeFiles/ProyectoBaseSDL2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ProyectoBaseSDL2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/ProyectoBaseSDL2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles 0
 .PHONY : CMakeFiles/ProyectoBaseSDL2.dir/rule

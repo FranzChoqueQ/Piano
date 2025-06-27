@@ -15,6 +15,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}  # Raíz del proyecto (para includes relativos desde src/)
     ${CMAKE_SOURCE_DIR}/engine/core
     ${CMAKE_SOURCE_DIR}/engine/graphics
+    ${CMAKE_SOURCE_DIR}/engine/graphics/shapes
     ${CMAKE_SOURCE_DIR}/game/States
     ${CMAKE_SOURCE_DIR}/game
 )
@@ -37,6 +38,8 @@ set(SOURCE_FILES
     engine/core/EventHandler.cpp
     engine/core/Window.cpp
     engine/graphics/TextRenderer.cpp
+    engine/graphics/shapes/Rectangle.cpp
+    engine/graphics/shapes/BotonRectangular.cpp
     game/States/MenuState.cpp
     game/States/PlayState.cpp
     game/States/PauseState.cpp
@@ -60,6 +63,12 @@ target_link_libraries(${PROJECT_NAME}
 # Manejo de DLLs en Windows
 # --------------------------------------------------
 if(WIN32)
+
+    set_target_properties(ProyectoBaseSDL2 PROPERTIES
+        WIN32_EXECUTABLE TRUE
+        LINK_FLAGS "-mwindows"
+    )
+
     add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
         "${CMAKE_PREFIX_PATH}/bin/SDL2.dll"

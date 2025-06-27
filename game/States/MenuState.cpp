@@ -6,7 +6,15 @@
 #include <stdexcept>
 //#include "PlayState.hpp"
 
-MenuState::MenuState(StateManager& manager) : stateManager(manager) {}
+MenuState::MenuState(StateManager& manager) : stateManager(manager) {
+    SDL_Color colorNormal = {100, 100, 255, 255};
+    SDL_Color colorHover = {150, 150, 255, 255};
+
+    botonInicio = std::make_unique<BotonRectangular>(
+        100, 200, 200, 50, 
+        colorNormal, colorHover
+    );
+}
 
 void MenuState::enter() {
     // Inicialización específica del menú
@@ -25,6 +33,7 @@ void MenuState::update(float deltaTime) {
 
 void MenuState::render(Window& window) {
     window.clear();
+    botonInicio->render(window.getRenderer());
     //textRender.loadFont("assets/fonts/arial.ttf", 36);
     // Renderizar texto "Aquí es el menú"
     const std::string menuText = "Presiona K para iniciar";
@@ -38,6 +47,13 @@ void MenuState::render(Window& window) {
 
 void MenuState::handleEvents(EventHandler& eventHandler) {
     eventHandler.pollEvents();
+    botonInicio->handleEvents(eventHandler);
+
+    if (botonInicio->isClicked(eventHandler)) {
+        stateManager.submitRequest(RequestChangeState{
+            std::make_unique<PlayState>(stateManager)
+        });
+    }
 
     if (eventHandler.isKeyPressed(SDL_SCANCODE_K)) {
         stateManager.submitRequest(RequestChangeState{

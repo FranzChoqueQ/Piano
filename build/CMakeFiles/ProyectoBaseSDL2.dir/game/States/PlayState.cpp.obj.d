@@ -345,4 +345,10 @@ CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/parse_numbers.h \
  C:\msys64\home\SDL2Proy\Piano\game\States\PauseState.hpp \
  C:\msys64\home\SDL2Proy\Piano\game\States\MenuState.hpp \
+ C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/BotonRectangular.hpp \
+ C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/Rectangle.hpp \
+ C:/msys64/ucrt64/include/c++/14.1.0/functional \
+ C:/msys64/ucrt64/include/c++/14.1.0/bits/std_function.h \
+ C:/msys64/ucrt64/include/c++/14.1.0/array \
+ C:/msys64/ucrt64/include/c++/14.1.0/compare \
  C:/msys64/ucrt64/include/c++/14.1.0/stdexcept

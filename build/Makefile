@@ -224,6 +224,54 @@ engine/graphics/TextRenderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/TextRenderer.cpp.s
 .PHONY : engine/graphics/TextRenderer.cpp.s
 
+engine/graphics/shapes/BotonRectangular.obj: engine/graphics/shapes/BotonRectangular.cpp.obj
+.PHONY : engine/graphics/shapes/BotonRectangular.obj
+
+# target to build an object file
+engine/graphics/shapes/BotonRectangular.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj
+.PHONY : engine/graphics/shapes/BotonRectangular.cpp.obj
+
+engine/graphics/shapes/BotonRectangular.i: engine/graphics/shapes/BotonRectangular.cpp.i
+.PHONY : engine/graphics/shapes/BotonRectangular.i
+
+# target to preprocess a source file
+engine/graphics/shapes/BotonRectangular.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.i
+.PHONY : engine/graphics/shapes/BotonRectangular.cpp.i
+
+engine/graphics/shapes/BotonRectangular.s: engine/graphics/shapes/BotonRectangular.cpp.s
+.PHONY : engine/graphics/shapes/BotonRectangular.s
+
+# target to generate assembly for a file
+engine/graphics/shapes/BotonRectangular.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.s
+.PHONY : engine/graphics/shapes/BotonRectangular.cpp.s
+
+engine/graphics/shapes/Rectangle.obj: engine/graphics/shapes/Rectangle.cpp.obj
+.PHONY : engine/graphics/shapes/Rectangle.obj
+
+# target to build an object file
+engine/graphics/shapes/Rectangle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj
+.PHONY : engine/graphics/shapes/Rectangle.cpp.obj
+
+engine/graphics/shapes/Rectangle.i: engine/graphics/shapes/Rectangle.cpp.i
+.PHONY : engine/graphics/shapes/Rectangle.i
+
+# target to preprocess a source file
+engine/graphics/shapes/Rectangle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.i
+.PHONY : engine/graphics/shapes/Rectangle.cpp.i
+
+engine/graphics/shapes/Rectangle.s: engine/graphics/shapes/Rectangle.cpp.s
+.PHONY : engine/graphics/shapes/Rectangle.s
+
+# target to generate assembly for a file
+engine/graphics/shapes/Rectangle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProyectoBaseSDL2.dir\build.make CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.s
+.PHONY : engine/graphics/shapes/Rectangle.cpp.s
+
 game/MainGame.obj: game/MainGame.cpp.obj
 .PHONY : game/MainGame.obj
 
@@ -413,6 +461,12 @@ help:
 	@echo ... engine/graphics/TextRenderer.obj
 	@echo ... engine/graphics/TextRenderer.i
 	@echo ... engine/graphics/TextRenderer.s
+	@echo ... engine/graphics/shapes/BotonRectangular.obj
+	@echo ... engine/graphics/shapes/BotonRectangular.i
+	@echo ... engine/graphics/shapes/BotonRectangular.s
+	@echo ... engine/graphics/shapes/Rectangle.obj
+	@echo ... engine/graphics/shapes/Rectangle.i
+	@echo ... engine/graphics/shapes/Rectangle.s
 	@echo ... game/MainGame.obj
 	@echo ... game/MainGame.i
 	@echo ... game/MainGame.s

@@ -332,6 +332,16 @@ CMakeFiles/ProyectoBaseSDL2.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.1.0/pstl/execution_defs.h \
  C:/msys64/home/SDL2Proy/Piano/game/States/MenuState.hpp \
  C:/msys64/home/SDL2Proy/Piano/game/States/GameState.hpp \
+ C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/BotonRectangular.hpp \
+ C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/Rectangle.hpp \
+ C:/msys64/ucrt64/include/c++/14.1.0/functional \
+ C:/msys64/ucrt64/include/c++/14.1.0/bits/std_function.h \
+ C:/msys64/ucrt64/include/c++/14.1.0/vector \
+ C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/14.1.0/bits/vector.tcc \
+ C:/msys64/ucrt64/include/c++/14.1.0/array \
+ C:/msys64/ucrt64/include/c++/14.1.0/compare \
  C:/msys64/home/SDL2Proy/Piano/game/States/StateManager.hpp \
  C:/msys64/ucrt64/include/c++/14.1.0/stack \
  C:/msys64/ucrt64/include/c++/14.1.0/deque \
@@ -339,10 +349,6 @@ CMakeFiles/ProyectoBaseSDL2.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/deque.tcc \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_stack.h \
  C:/msys64/home/SDL2Proy/Piano/game/States/StateRequest.hpp \
- C:/msys64/ucrt64/include/c++/14.1.0/vector \
- C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_vector.h \
- C:/msys64/ucrt64/include/c++/14.1.0/bits/stl_bvector.h \
- C:/msys64/ucrt64/include/c++/14.1.0/bits/vector.tcc \
  C:/msys64/ucrt64/include/c++/14.1.0/variant \
  C:/msys64/ucrt64/include/c++/14.1.0/bits/parse_numbers.h \
  C:/msys64/ucrt64/include/c++/14.1.0/iostream \

@@ -143,11 +143,41 @@ CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/TextRenderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/TextRenderer.cpp.s"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\msys64\home\SDL2Proy\Piano\engine\graphics\TextRenderer.cpp -o CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\TextRenderer.cpp.s
 
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/flags.make
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj: C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/Rectangle.cpp
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\Rectangle.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\Rectangle.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\engine\graphics\shapes\Rectangle.cpp
+
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\msys64\home\SDL2Proy\Piano\engine\graphics\shapes\Rectangle.cpp > CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\Rectangle.cpp.i
+
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\msys64\home\SDL2Proy\Piano\engine\graphics\shapes\Rectangle.cpp -o CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\Rectangle.cpp.s
+
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/flags.make
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj: C:/msys64/home/SDL2Proy/Piano/engine/graphics/shapes/BotonRectangular.cpp
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\BotonRectangular.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\BotonRectangular.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\engine\graphics\shapes\BotonRectangular.cpp
+
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\msys64\home\SDL2Proy\Piano\engine\graphics\shapes\BotonRectangular.cpp > CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\BotonRectangular.cpp.i
+
+CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\msys64\home\SDL2Proy\Piano\engine\graphics\shapes\BotonRectangular.cpp -o CMakeFiles\ProyectoBaseSDL2.dir\engine\graphics\shapes\BotonRectangular.cpp.s
+
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/flags.make
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj: C:/msys64/home/SDL2Proy/Piano/game/States/MenuState.cpp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\game\States\MenuState.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\game\States\MenuState.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\game\States\MenuState.cpp
 
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.i: cmake_force
@@ -162,7 +192,7 @@ CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj: CMakeFiles/Proyec
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj: C:/msys64/home/SDL2Proy/Piano/game/States/PlayState.cpp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\game\States\PlayState.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\game\States\PlayState.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\game\States\PlayState.cpp
 
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.i: cmake_force
@@ -177,7 +207,7 @@ CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj: CMakeFiles/Proye
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj: C:/msys64/home/SDL2Proy/Piano/game/States/PauseState.cpp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\game\States\PauseState.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\game\States\PauseState.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\game\States\PauseState.cpp
 
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.i: cmake_force
@@ -192,7 +222,7 @@ CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.obj: CMakeFiles/Pro
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.obj: C:/msys64/home/SDL2Proy/Piano/game/States/StateManager.cpp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\game\States\StateManager.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\game\States\StateManager.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\game\States\StateManager.cpp
 
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateManager.cpp.i: cmake_force
@@ -207,7 +237,7 @@ CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.obj: CMakeFiles/Pro
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.obj: C:/msys64/home/SDL2Proy/Piano/game/States/StateRequest.cpp
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\game\States\StateRequest.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\game\States\StateRequest.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\game\States\StateRequest.cpp
 
 CMakeFiles/ProyectoBaseSDL2.dir/game/States/StateRequest.cpp.i: cmake_force
@@ -222,7 +252,7 @@ CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj: CMakeFiles/ProyectoBaseSD
 CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/includes_CXX.rsp
 CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj: C:/msys64/home/SDL2Proy/Piano/game/MainGame.cpp
 CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj: CMakeFiles/ProyectoBaseSDL2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj"
 	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.obj -MF CMakeFiles\ProyectoBaseSDL2.dir\game\MainGame.cpp.obj.d -o CMakeFiles\ProyectoBaseSDL2.dir\game\MainGame.cpp.obj -c C:\msys64\home\SDL2Proy\Piano\game\MainGame.cpp
 
 CMakeFiles/ProyectoBaseSDL2.dir/game/MainGame.cpp.i: cmake_force
@@ -240,6 +270,8 @@ ProyectoBaseSDL2_OBJECTS = \
 "CMakeFiles/ProyectoBaseSDL2.dir/engine/core/EventHandler.cpp.obj" \
 "CMakeFiles/ProyectoBaseSDL2.dir/engine/core/Window.cpp.obj" \
 "CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/TextRenderer.cpp.obj" \
+"CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj" \
+"CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj" \
 "CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj" \
 "CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj" \
 "CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj" \
@@ -255,6 +287,8 @@ ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/engine/core/Game.cpp.obj
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/engine/core/EventHandler.cpp.obj
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/engine/core/Window.cpp.obj
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/TextRenderer.cpp.obj
+ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/Rectangle.cpp.obj
+ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/engine/graphics/shapes/BotonRectangular.cpp.obj
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/game/States/MenuState.cpp.obj
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/game/States/PlayState.cpp.obj
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/game/States/PauseState.cpp.obj
@@ -265,7 +299,7 @@ ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/build.make
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/linkLibs.rsp
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/objects1.rsp
 ProyectoBaseSDL2.exe: CMakeFiles/ProyectoBaseSDL2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ProyectoBaseSDL2.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\msys64\home\SDL2Proy\Piano\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ProyectoBaseSDL2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProyectoBaseSDL2.dir\link.txt --verbose=$(VERBOSE)
 	C:\msys64\ucrt64\bin\cmake.exe -E copy C:/msys64/ucrt64/bin/SDL2.dll C:/msys64/home/SDL2Proy/Piano/build
 	C:\msys64\ucrt64\bin\cmake.exe -E copy C:/msys64/ucrt64/bin/SDL2_ttf.dll C:/msys64/home/SDL2Proy/Piano/build
