@@ -1,0 +1,54 @@
+ProyectoBaseSDL2/
+│
+├── engine/               # Código del motor (reutilizable entre proyectos)
+│   ├── core/             # Componentes centrales
+│   │   ├── Game.hpp      # Clase abstracta base del juego
+│   │   ├── Game.cpp
+│   │   ├── Window.hpp
+│   │   ├── Window.cpp
+│   │   ├── EventHandler.hpp
+│   │   └── EventHandler.cpp
+│   │
+│   ├── ecs/              # Sistema Entity-Component-System (opcional para proyectos grandes)
+│   ├── graphics/         # Subsistema gráfico
+│   │   ├── TextureManager.hpp
+│   │   ├── TextureManager.cpp
+│   │   ├── Sprite.hpp
+│   │   └── Sprite.cpp
+│   │
+│   ├── audio/            # Subsistema de audio
+│   └── utils/            # Utilidades comunes
+│       ├── Logger.hpp
+│       ├── Timer.hpp
+│       └── Constants.hpp
+│
+├── game/                 # Código específico del juego
+│   ├── GameObjects/      # Objetos del juego concretos
+│   ├── Scenes/           # Gestión de escenas
+│   ├── States/           # Máquina de estados del juego
+│   └── Config/           # Configuración específica
+│
+├── assets/
+│   ├── textures/
+│   ├── fonts/
+│   ├── sounds/
+│   └── shaders/          # Para proyectos con OpenGL/Vulkan
+│
+├── third_party/          # Dependencias externas
+│   ├── SDL2/
+│   ├── SDL2_image/
+│   ├── SDL2_ttf/
+│   └── SDL2_mixer/
+│
+├── build/                # Archivos de construcción
+│   ├── debug/
+│   └── release/
+│
+├── docs/                 # Documentación del proyecto
+│
+├── scripts/              # Scripts útiles (empaquetado, etc.)
+├── src/
+|    └── main.cpp
+├── CMakeLists.txt        # Sistema de construcción moderno
+├── .gitignore
+└── README.md

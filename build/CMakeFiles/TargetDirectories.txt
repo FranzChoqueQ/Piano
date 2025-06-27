@@ -1,0 +1,3 @@
+C:/msys64/home/SDL2Proy/Piano/build/CMakeFiles/ProyectoBaseSDL2.dir
+C:/msys64/home/SDL2Proy/Piano/build/CMakeFiles/edit_cache.dir
+C:/msys64/home/SDL2Proy/Piano/build/CMakeFiles/rebuild_cache.dir
