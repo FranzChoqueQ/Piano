@@ -11,9 +11,9 @@ public:
     TecladoPiano(int xOffset = 0, int yOffset = 0);
     
     void render(SDL_Renderer* renderer) const;
-    void handleEvents(const EventHandler& e);
+    void handleEvents(const EventHandler& event);
     
     const PianoKey* getKeyAt(int x, int y) const;
-    TecladoPiano(const TecladoPiano&) = delete;
-    TecladoPiano& operator=(const TecladoPiano&) = delete;
+
+    void setOnlyKeyActive(int noteID);
 };

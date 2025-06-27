@@ -1,10 +1,9 @@
 #include "TecladoPiano.hpp"
 #include <iostream>
+#include <map>
+//#include <SDL2/SDL_scancode.h> // si no lo tenés ya
 
 TecladoPiano::TecladoPiano(int xOffset, int yOffset) {
-    
-    std::cout << "=== INICIALIZANDO TECLADO ===" << std::endl;
-    std::cout << "Posicion base: X=" << xOffset << " Y=" << yOffset << std::endl;
 
     // 🎹 Dimensiones base
     const int whiteKeyWidth  = 32;    // 25 blancas = 800 px
@@ -42,6 +41,12 @@ TecladoPiano::TecladoPiano(int xOffset, int yOffset) {
     }
 }
 
+std::string getNoteNameFromOffset(int noteID) {
+        const std::string names[12] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
+        int midi = 41 + noteID; // 41 = F2
+        return names[midi % 12] + std::to_string((midi / 12) - 1);
+    }
+
 void TecladoPiano::render(SDL_Renderer* renderer) const {
     //std::cout << "\n=== RENDERIZANDO TECLADO ===" << std::endl;
     // ⚪ Dibujar teclas blancas primero
@@ -55,14 +60,86 @@ void TecladoPiano::render(SDL_Renderer* renderer) const {
     }
 }
 
-void TecladoPiano::handleEvents(const EventHandler& e) {
+const std::map<SDL_Scancode, int> keyToNoteID = {
+        { SDL_SCANCODE_1, 0 },  // F2
+        { SDL_SCANCODE_2, 1 },  // F#2
+        { SDL_SCANCODE_3, 2 },  // G2
+        { SDL_SCANCODE_4, 3 },  // G#2
+        { SDL_SCANCODE_5, 4 },  // A2
+        { SDL_SCANCODE_6, 5 },  // A#2
+        { SDL_SCANCODE_7, 6 },  // B2
+        { SDL_SCANCODE_8, 7 },  // C3
+        { SDL_SCANCODE_9, 8 },  // C#3
+        { SDL_SCANCODE_0, 9 },  // D3
+        { SDL_SCANCODE_APOSTROPHE, 10 }, // D#3
+        { SDL_SCANCODE_SLASH, 11 }, // E3
+        { SDL_SCANCODE_Q, 12 }, // F3
+        { SDL_SCANCODE_W, 13 },  // F#3
+        { SDL_SCANCODE_E, 14 },  // G3
+        { SDL_SCANCODE_R, 15 },  // G#3
+        { SDL_SCANCODE_T, 16 },  // A3
+        { SDL_SCANCODE_Y, 17 },  // A#3
+        { SDL_SCANCODE_U, 18 },  // B3
+        { SDL_SCANCODE_I, 19 },  // C4
+        { SDL_SCANCODE_O, 20 },  // C#4
+        { SDL_SCANCODE_P, 21 },  // D4
+        { SDL_SCANCODE_GRAVE, 22 },  // D#4
+        { SDL_SCANCODE_A, 23 }, // E4
+        { SDL_SCANCODE_S, 24 }, // F4
+        { SDL_SCANCODE_D, 25 }, // F#4
+        { SDL_SCANCODE_F, 26 },  // G4
+        { SDL_SCANCODE_G, 27 },  // G#4
+        { SDL_SCANCODE_H, 28 },  // A4
+        { SDL_SCANCODE_J, 29 },  // A#4
+        { SDL_SCANCODE_K, 30 },  // B4
+        { SDL_SCANCODE_L, 31 },  // C5
+        { SDL_SCANCODE_Z, 32 },  // C#5
+        { SDL_SCANCODE_X, 33 },  // D5
+        { SDL_SCANCODE_C, 34 },  // D#5
+        { SDL_SCANCODE_V, 35 },  // E5
+        { SDL_SCANCODE_B, 36 }, // F5
+        { SDL_SCANCODE_N, 37 }, // F#5
+        { SDL_SCANCODE_M, 38 }, // G5
+        { SDL_SCANCODE_COMMA, 39 },  // G#5
+        { SDL_SCANCODE_PERIOD, 40 },  // A5
+        { SDL_SCANCODE_MINUS, 41 }  // A#5
+    };
+
+void TecladoPiano::handleEvents(const EventHandler& event) {
+
+    for(auto& key : teclasBlancas) key.setActive(false);
+    for(auto& key : teclasNegras) key.setActive(false);
+
     for (auto& key : teclasBlancas) {
-        key.setActive(key.isClicked(e));
+        if (key.isClicked(event)) {
+            key.setActive(true);
+            std::cout << "🎵 Click sobre B: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
+            return; // Tecla negra tiene prioridad visual
+        }
     }
 
     for (auto& key : teclasNegras) {
-        key.setActive(key.isClicked(e));
+        if (key.isClicked(event)) {
+            key.setActive(true);
+            std::cout << "🎵 Click sobre N: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
+            return;
+        }
     }
+
+    // 🎹 Entrada desde teclado físico
+    for (const auto& [scancode, noteID] : keyToNoteID) {
+        if (event.isKeyPressed(scancode)) {
+            std::cout << "⌨️  Tecla fisica: " << getNoteNameFromOffset(noteID) << std::endl;
+
+            // Activar visualmente la tecla correspondiente
+            for (auto& key : teclasBlancas)
+                key.setActive(key.getNoteID() == noteID);
+            for (auto& key : teclasNegras)
+                key.setActive(key.getNoteID() == noteID);
+            return;
+        }
+    }
+
 }
 
 const PianoKey* TecladoPiano::getKeyAt(int x, int y) const {
@@ -82,4 +159,12 @@ const PianoKey* TecladoPiano::getKeyAt(int x, int y) const {
         }
     }
     return nullptr;
+}
+
+void TecladoPiano::setOnlyKeyActive(int noteID) {
+    for (auto& key : teclasBlancas)
+        key.setActive(key.getNoteID() == noteID);
+
+    for (auto& key : teclasNegras)
+        key.setActive(key.getNoteID() == noteID);
 }

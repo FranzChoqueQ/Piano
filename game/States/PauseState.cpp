@@ -38,7 +38,7 @@ void PauseState::render(Window& window) {
 void PauseState::handleEvents(EventHandler& eventHandler) {
     eventHandler.pollEvents();
 
-    if (eventHandler.isKeyPressed(SDL_SCANCODE_P)) {
+    if (eventHandler.isKeyPressed(SDL_SCANCODE_LEFTBRACKET)) {
         stateManager.popState();  // Quitar el estado de pausa
     }
 }

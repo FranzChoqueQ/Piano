@@ -7,8 +7,8 @@
 //#include "PlayState.hpp"
 
 MenuState::MenuState(StateManager& manager) : stateManager(manager) {
-    SDL_Color colorNormal = {40, 70, 110, 255};
-    SDL_Color colorHover = {0, 0, 0, 255};
+    SDL_Color colorNormal = {40, 10, 110, 255};     //{40, 70, 110, 255};
+    SDL_Color colorHover = {40, 20, 190, 0};      //{0, 0, 0, 255};
 
     botonInicio = std::make_unique<BotonRectangular>(
         300, 250, 220, 100, 

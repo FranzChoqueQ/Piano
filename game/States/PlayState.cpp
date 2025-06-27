@@ -72,14 +72,15 @@ void PlayState::render(Window& window) {
 
 void PlayState::handleEvents(EventHandler& eventHandler) {
     eventHandler.pollEvents();
+    piano.handleEvents(eventHandler);
 
-    if (eventHandler.isKeyPressed(SDL_SCANCODE_P)) {
+    if (eventHandler.isKeyPressed(SDL_SCANCODE_LEFTBRACKET)) {
         stateManager.submitRequest(StateRequest{
             RequestPushState{std::make_unique<PauseState>(stateManager)}  // Constructor correcto
         });
     }
     
-    if (eventHandler.isKeyPressed(SDL_SCANCODE_F)) {
+    if (eventHandler.isKeyPressed(SDL_SCANCODE_SEMICOLON)) {
         stateManager.submitRequest(StateRequest{
             RequestChangeState{std::make_unique<MenuState>(stateManager)}  // Constructor correcto
         });
