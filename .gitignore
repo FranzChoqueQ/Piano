@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Carpeta de compilación y VS Code
+build/
+.vscode/

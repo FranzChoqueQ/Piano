@@ -1,10 +1,7 @@
 #include "Rectangle.hpp"
 
-Rectangle::Rectangle(int x, int y, int w, int h, SDL_Color color) : color(color){
-    rect.x = x;
-    rect.y = y;
-    rect.w = w;
-    rect.h = h;
+Rectangle::Rectangle(int x, int y, int w, int h, SDL_Color color) : rect{x,y,w,h}, color(color){
+    
 }
 
 Rectangle::~Rectangle() {

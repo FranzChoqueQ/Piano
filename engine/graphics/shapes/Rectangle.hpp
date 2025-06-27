@@ -26,8 +26,11 @@ public:
     void setColor(SDL_Color newColor);
     //void setPosition(int x, int y);
 
+    SDL_Rect rect;
+    SDL_Color color;
+
 private:
-    SDL_Rect rect;      // Posición y tamaño
-    SDL_Color color;    // Color del rectangulo 
+          // Posición y tamaño
+        // Color del rectangulo 
 };
 

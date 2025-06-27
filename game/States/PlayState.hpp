@@ -1,6 +1,8 @@
 #pragma once
 #include "GameState.hpp"
 
+#include "engine/graphics/shapes/TecladoPiano.hpp"
+
 class StateManager;
 
 class PlayState : public GameState {
@@ -15,5 +17,7 @@ public:
     
 private:
     StateManager& stateManager;
+    TecladoPiano piano;
+    //TecladoPiano tecladoPiano;
     // ... otros miembros ...
 };

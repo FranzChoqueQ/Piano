@@ -7,18 +7,18 @@
 //#include "PlayState.hpp"
 
 MenuState::MenuState(StateManager& manager) : stateManager(manager) {
-    SDL_Color colorNormal = {100, 100, 255, 255};
-    SDL_Color colorHover = {150, 150, 255, 255};
+    SDL_Color colorNormal = {40, 70, 110, 255};
+    SDL_Color colorHover = {0, 0, 0, 255};
 
     botonInicio = std::make_unique<BotonRectangular>(
-        100, 200, 200, 50, 
+        300, 250, 220, 100, 
         colorNormal, colorHover
     );
 }
 
 void MenuState::enter() {
     // Inicialización específica del menú
-    if (!textRender.loadFont("assets/fonts/arial.ttf", 36)) {
+    if (!textRender.loadFont("assets/fonts/georgia.ttf", 36)) {
         throw std::runtime_error("No se pudo cargar la fuente en PlayState");
     }
 }
@@ -36,11 +36,11 @@ void MenuState::render(Window& window) {
     botonInicio->render(window.getRenderer());
     //textRender.loadFont("assets/fonts/arial.ttf", 36);
     // Renderizar texto "Aquí es el menú"
-    const std::string menuText = "Presiona K para iniciar";
-    SDL_Color white = {255, 100, 255, 255};
+    const std::string menuText = "INICIAR";
+    SDL_Color white = {200, 200, 210, 255};
     //int textX = (screenWidth - textRenderer.getTextWidth(menuText)) / 2;
     //int textY = (screenHeight / 2) - 50;
-    textRender.render(window.getRenderer(), menuText, 100, 280, white);
+    textRender.render(window.getRenderer(), menuText, 340, 280, white);
     
     window.present();
 }

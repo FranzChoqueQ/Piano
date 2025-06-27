@@ -40,6 +40,8 @@ set(SOURCE_FILES
     engine/graphics/TextRenderer.cpp
     engine/graphics/shapes/Rectangle.cpp
     engine/graphics/shapes/BotonRectangular.cpp
+    engine/graphics/shapes/TecladoPiano.cpp
+    engine/graphics/shapes/PianoKey.cpp
     game/States/MenuState.cpp
     game/States/PlayState.cpp
     game/States/PauseState.cpp
@@ -64,10 +66,11 @@ target_link_libraries(${PROJECT_NAME}
 # --------------------------------------------------
 if(WIN32)
 
-    set_target_properties(ProyectoBaseSDL2 PROPERTIES
-        WIN32_EXECUTABLE TRUE
-        LINK_FLAGS "-mwindows"
-    )
+    # Si ya no necesitas debbugin
+    #set_target_properties(ProyectoBaseSDL2 PROPERTIES
+    #    WIN32_EXECUTABLE TRUE
+    #    LINK_FLAGS "-mwindows"
+    #)
 
     add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
