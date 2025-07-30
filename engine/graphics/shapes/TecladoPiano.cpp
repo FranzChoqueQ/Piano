@@ -1,9 +1,33 @@
 #include "TecladoPiano.hpp"
 #include <iostream>
 #include <map>
+
 //#include <SDL2/SDL_scancode.h> // si no lo tenés ya
 
 TecladoPiano::TecladoPiano(int xOffset, int yOffset) {
+
+    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+        std::cerr << "SDL_mixer error: " << Mix_GetError() << std::endl;
+    }
+
+    const std::string basePath = "assets/sounds/";
+    const std::vector<std::string> noteFiles = {
+        "F2.mp3", "Gb2.mp3", "G2.mp3", "Ab2.mp3", "A2.mp3", "Bb2.mp3", "B2.mp3",
+        "C3.mp3", "Db3.mp3", "D3.mp3", "Eb3.mp3", "E3.mp3",
+        "F3.mp3", "Gb3.mp3", "G3.mp3", "Ab3.mp3", "A3.mp3", "Bb3.mp3", "B3.mp3",
+        "C4.mp3", "Db4.mp3", "D4.mp3", "Eb4.mp3", "E4.mp3",
+        "F4.mp3", "Gb4.mp3", "G4.mp3", "Ab4.mp3", "A4.mp3", "Bb4.mp3", "B4.mp3",
+        "C5.mp3", "Db5.mp3", "D5.mp3", "Eb5.mp3", "E5.mp3",
+        "F5.mp3", "Gb5.mp3", "G5.mp3", "Ab5.mp3", "A5.mp3", "Bb5.mp3"
+    };
+
+    for (const auto& file : noteFiles) {
+        Mix_Chunk* sound = Mix_LoadWAV((basePath + file).c_str());
+        if (!sound) {
+            std::cerr << "Error cargando: " << file << " → " << Mix_GetError() << std::endl;
+        }
+        sounds.push_back(sound);
+    }
 
     // 🎹 Dimensiones base
     const int whiteKeyWidth  = 32;    // 25 blancas = 800 px
@@ -39,6 +63,10 @@ TecladoPiano::TecladoPiano(int xOffset, int yOffset) {
             teclasNegras.push_back(PianoKey(x, yOffset, blackKeyWidth, blackKeyHeight, blackColor, KeyType::BLACK, noteID++));
         }
     }
+}
+
+TecladoPiano::~TecladoPiano(){
+    Mix_CloseAudio();
 }
 
 std::string getNoteNameFromOffset(int noteID) {
@@ -105,6 +133,12 @@ const std::map<SDL_Scancode, int> keyToNoteID = {
         { SDL_SCANCODE_MINUS, 41 }  // A#5
     };
 
+
+
+void loadSounds() {
+    
+}
+
 void TecladoPiano::handleEvents(const EventHandler& event) {
 
     for(auto& key : teclasBlancas) key.setActive(false);
@@ -114,6 +148,11 @@ void TecladoPiano::handleEvents(const EventHandler& event) {
         if (key.isClicked(event)) {
             key.setActive(true);
             std::cout << "🎵 Click sobre B: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
+            int noteID = key.getNoteID();
+            //Mix_PlayChannel(-1, sounds[noteID], 0);
+            if (noteID >= 0 && noteID < sounds.size()) {
+                Mix_PlayChannel(-1, sounds[noteID], 0);
+            }
             return; // Tecla negra tiene prioridad visual
         }
     }
@@ -122,20 +161,28 @@ void TecladoPiano::handleEvents(const EventHandler& event) {
         if (key.isClicked(event)) {
             key.setActive(true);
             std::cout << "🎵 Click sobre N: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
+            int noteID = key.getNoteID();
+            if (noteID >= 0 && noteID < sounds.size()) {
+                Mix_PlayChannel(-1, sounds[noteID], 0);
+            }
             return;
         }
     }
 
     // 🎹 Entrada desde teclado físico
     for (const auto& [scancode, noteID] : keyToNoteID) {
+        //std::cout << "El resultado es: " << event.isKeyPressed(scancode) << std::endl;
         if (event.isKeyPressed(scancode)) {
             std::cout << "⌨️  Tecla fisica: " << getNoteNameFromOffset(noteID) << std::endl;
-
+            Mix_PlayChannel(-1, sounds[noteID], 0);
             // Activar visualmente la tecla correspondiente
-            for (auto& key : teclasBlancas)
+            for (auto& key : teclasBlancas){
                 key.setActive(key.getNoteID() == noteID);
-            for (auto& key : teclasNegras)
+            }
+                   
+            for (auto& key : teclasNegras){
                 key.setActive(key.getNoteID() == noteID);
+            }  
             return;
         }
     }

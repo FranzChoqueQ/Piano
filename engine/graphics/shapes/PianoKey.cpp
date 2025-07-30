@@ -16,7 +16,7 @@ void PianoKey::render(SDL_Renderer* renderer) const {
         ? SDL_Color{ Uint8(color.r / 2), Uint8(color.g / 2), Uint8(color.b / 2), color.a }
         : color;
     
-    SDL_Delay(1);
+    SDL_Delay(1); // Esta parte hay que eliminar para que suene multiples teclas pero hay que añadir un control de SDL_MIXER
 
     SDL_SetRenderDrawColor(renderer, drawColor.r, drawColor.g, drawColor.b, drawColor.a);
     SDL_RenderFillRect(renderer, &rect);

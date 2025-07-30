@@ -59,6 +59,7 @@ target_link_libraries(${PROJECT_NAME}
     SDL2main
     SDL2
     SDL2_ttf
+    SDL2_mixer
 )
 
 # --------------------------------------------------
@@ -80,6 +81,11 @@ if(WIN32)
     add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
         "${CMAKE_PREFIX_PATH}/bin/SDL2_ttf.dll"
+        $<TARGET_FILE_DIR:${PROJECT_NAME}>
+    )
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+        "${CMAKE_PREFIX_PATH}/bin/SDL2_mixer.dll"
         $<TARGET_FILE_DIR:${PROJECT_NAME}>
     )
     

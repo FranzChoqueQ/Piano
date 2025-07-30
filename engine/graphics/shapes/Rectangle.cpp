@@ -13,7 +13,7 @@ void Rectangle::render(SDL_Renderer* renderer) const {
     SDL_RenderFillRect(renderer, &rect);
 }
 
-void Rectangle::handleEvent(EventHandler& eventHandler) {
+void Rectangle::handleEvent(EventHandler& event) {
     // Implementación base vacía o común para todos los rectángulos
 }
 
@@ -39,5 +39,5 @@ void Rectangle::setColor(SDL_Color newColor) {
 void Rectangle::setPosition(int x, int y) {
     rect.x = x;
     rect.y = y;
-}
-*/
+}*/
+
