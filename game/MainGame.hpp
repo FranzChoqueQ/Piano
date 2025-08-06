@@ -3,6 +3,7 @@
 #include "engine/graphics/TextRenderer.hpp"
 #include "States/MenuState.hpp"
 #include "States/StateManager.hpp"
+#include "engine/core/EventHandler.hpp"
 
 class MainGame : public Game {
 public:
@@ -15,9 +16,8 @@ protected:
     void handleEvents() override;
     
 private:
-    //void renderText(const std::string& message, int x, int y);
     TextRenderer textRender;
-    //MenuState menuEstado;
     StateManager stateManager;
+    EventHandler eventHandler;
 
 };

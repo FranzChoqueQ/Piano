@@ -28,16 +28,12 @@ void PauseState::render(Window& window) {
     window.clear();
     const std::string menuText = "Presiona P para volver";
     SDL_Color white = {255, 100, 255, 255};
-    //int textX = (screenWidth - textRenderer.getTextWidth(menuText)) / 2;
-    //int textY = (screenHeight / 2) - 50;
     textRender.render(window.getRenderer(), menuText, 100, 280, white);
     // Renderizado del menú de pausa
     window.present();
 }
 
 void PauseState::handleEvents(EventHandler& eventHandler) {
-    eventHandler.pollEvents();
-
     if (eventHandler.isKeyPressed(SDL_SCANCODE_LEFTBRACKET)) {
         stateManager.popState();  // Quitar el estado de pausa
     }

@@ -11,6 +11,8 @@ class TecladoPiano {
 public:
     TecladoPiano(int xOffset = 0, int yOffset = 0);
     ~TecladoPiano();
+
+    void update();
     
     void render(SDL_Renderer* renderer) const;
     void handleEvents(const EventHandler& event);

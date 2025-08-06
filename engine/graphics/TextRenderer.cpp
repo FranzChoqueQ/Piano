@@ -51,26 +51,6 @@ void TextRenderer::render(SDL_Renderer* renderer, const std::string& text, int x
     SDL_DestroyTexture(texture);
 }
 
-/*
-void MainGame::renderText(const std::string& message, int x, int y) {
-    TTF_Font* font = TTF_OpenFont("assets/fonts/arial.ttf", 25);        //assets/fonts/arial.ttf
-    if (!font) {
-        throw std::runtime_error("Failed to load font: " + std::string(TTF_GetError()));
-    }
-    
-    SDL_Color color = {255, 255, 255, 255}; // Blanco
-    SDL_Surface* surface = TTF_RenderText_Solid(font, message.c_str(), color);
-    SDL_Texture* texture = SDL_CreateTextureFromSurface(window.getRenderer(), surface);
-    
-    SDL_Rect rect = {x, y, surface->w, surface->h};
-    SDL_RenderCopy(window.getRenderer(), texture, nullptr, &rect);
-    
-    SDL_FreeSurface(surface);
-    SDL_DestroyTexture(texture);
-    TTF_CloseFont(font);
-}
-*/
-
 int TextRenderer::getTextWidth(const std::string& text) const {
     if (!font) return 0;
     int width;

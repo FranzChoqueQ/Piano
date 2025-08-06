@@ -1,10 +1,9 @@
 #include "MenuState.hpp"
 #include "PlayState.hpp"
 #include "StateManager.hpp"
-#include "PauseState.hpp"  // Necesario para crear el estado de pausa
+#include "PauseState.hpp" 
 #include <SDL2/SDL_ttf.h>
 #include <stdexcept>
-//#include "PlayState.hpp"
 
 MenuState::MenuState(StateManager& manager) : stateManager(manager) {
     SDL_Color colorNormal = {40, 10, 110, 255};     //{40, 70, 110, 255};
@@ -34,19 +33,14 @@ void MenuState::update(float deltaTime) {
 void MenuState::render(Window& window) {
     window.clear();
     botonInicio->render(window.getRenderer());
-    //textRender.loadFont("assets/fonts/arial.ttf", 36);
     // Renderizar texto "Aquí es el menú"
     const std::string menuText = "INICIAR";
     SDL_Color white = {200, 200, 210, 255};
-    //int textX = (screenWidth - textRenderer.getTextWidth(menuText)) / 2;
-    //int textY = (screenHeight / 2) - 50;
     textRender.render(window.getRenderer(), menuText, 340, 280, white);
-    
     window.present();
 }
 
 void MenuState::handleEvents(EventHandler& eventHandler) {
-    eventHandler.pollEvents();
     botonInicio->handleEvents(eventHandler);
 
     if (botonInicio->isClicked(eventHandler)) {

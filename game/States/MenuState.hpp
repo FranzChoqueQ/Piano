@@ -5,7 +5,6 @@
 class MenuState : public GameState {
 public:
     MenuState(StateManager& manager);
-    //MenuState();
     void enter() override;
     void exit() override;
     void update(float deltaTime) override;

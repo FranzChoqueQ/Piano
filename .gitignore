@@ -34,3 +34,5 @@
 # Carpeta de compilación y VS Code
 build/
 .vscode/
+assets/sounds
+assets/fonts

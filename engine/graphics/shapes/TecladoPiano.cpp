@@ -75,16 +75,21 @@ std::string getNoteNameFromOffset(int noteID) {
         return names[midi % 12] + std::to_string((midi / 12) - 1);
     }
 
+void TecladoPiano::update(){
+    for (auto& key : teclasBlancas) key.update();
+    for (auto& key : teclasNegras) key.update();
+}
+
 void TecladoPiano::render(SDL_Renderer* renderer) const {
     //std::cout << "\n=== RENDERIZANDO TECLADO ===" << std::endl;
     // ⚪ Dibujar teclas blancas primero
     for (const auto& key : teclasBlancas) {
-        key.render(renderer);
+        key.renderPianoKey(renderer);
     }
 
     // ⚫ Luego dibujar negras por encima
     for (const auto& key : teclasNegras) {
-        key.render(renderer);
+        key.renderPianoKey(renderer);
     }
 }
 
@@ -133,20 +138,16 @@ const std::map<SDL_Scancode, int> keyToNoteID = {
         { SDL_SCANCODE_MINUS, 41 }  // A#5
     };
 
-
-
 void loadSounds() {
     
 }
 
-void TecladoPiano::handleEvents(const EventHandler& event) {
 
-    for(auto& key : teclasBlancas) key.setActive(false);
-    for(auto& key : teclasNegras) key.setActive(false);
+void TecladoPiano::handleEvents(const EventHandler& event) {
 
     for (auto& key : teclasBlancas) {
         if (key.isClicked(event)) {
-            key.setActive(true);
+            key.setActive(true, true);
             std::cout << "🎵 Click sobre B: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
             int noteID = key.getNoteID();
             //Mix_PlayChannel(-1, sounds[noteID], 0);
@@ -159,7 +160,7 @@ void TecladoPiano::handleEvents(const EventHandler& event) {
 
     for (auto& key : teclasNegras) {
         if (key.isClicked(event)) {
-            key.setActive(true);
+            key.setActive(true, false);
             std::cout << "🎵 Click sobre N: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
             int noteID = key.getNoteID();
             if (noteID >= 0 && noteID < sounds.size()) {
@@ -177,20 +178,19 @@ void TecladoPiano::handleEvents(const EventHandler& event) {
             Mix_PlayChannel(-1, sounds[noteID], 0);
             // Activar visualmente la tecla correspondiente
             for (auto& key : teclasBlancas){
-                key.setActive(key.getNoteID() == noteID);
+                key.setActive(key.getNoteID() == noteID, true);
             }
-                   
+        
             for (auto& key : teclasNegras){
-                key.setActive(key.getNoteID() == noteID);
+                key.setActive(key.getNoteID() == noteID, false);
             }  
             return;
         }
     }
-
 }
 
 const PianoKey* TecladoPiano::getKeyAt(int x, int y) const {
-    // 🖱️ Primero intentamos con las teclas negras (están encima)
+    // Teclas negras encima
     for (const auto& key : teclasNegras) {
         if (key.getRect().x <= x && x <= key.getRect().x + key.getRect().w &&
             key.getRect().y <= y && y <= key.getRect().y + key.getRect().h) {
@@ -210,8 +210,8 @@ const PianoKey* TecladoPiano::getKeyAt(int x, int y) const {
 
 void TecladoPiano::setOnlyKeyActive(int noteID) {
     for (auto& key : teclasBlancas)
-        key.setActive(key.getNoteID() == noteID);
+        key.setActive(key.getNoteID() == noteID, true);
 
     for (auto& key : teclasNegras)
-        key.setActive(key.getNoteID() == noteID);
+        key.setActive(key.getNoteID() == noteID, false);
 }
