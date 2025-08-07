@@ -16,7 +16,6 @@ MenuState::MenuState(StateManager& manager) : stateManager(manager) {
 }
 
 void MenuState::enter() {
-    // Inicialización específica del menú
     if (!textRender.loadFont("assets/fonts/georgia.ttf", 36)) {
         throw std::runtime_error("No se pudo cargar la fuente en PlayState");
     }

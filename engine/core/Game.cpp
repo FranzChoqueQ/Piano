@@ -5,7 +5,6 @@ Game::Game(const std::string& title, int width, int height)
     : window(title, width, height), 
       eventHandler(),
       isRunning(false) {
-    // Inicialización básica del juego
 }
 
 void Game::run() {

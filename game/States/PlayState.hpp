@@ -18,6 +18,4 @@ public:
 private:
     StateManager& stateManager;
     TecladoPiano piano;
-    //TecladoPiano tecladoPiano;
-    // ... otros miembros ...
 };

@@ -24,13 +24,10 @@ public:
 
     // Permite cambiar color o posicion
     void setColor(SDL_Color newColor);
-    //void setPosition(int x, int y);
 
     SDL_Rect rect;
     SDL_Color color;
 
 private:
-          // Posición y tamaño
-        // Color del rectangulo 
 };
 

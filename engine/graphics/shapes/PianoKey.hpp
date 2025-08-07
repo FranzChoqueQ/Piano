@@ -6,7 +6,7 @@ enum class KeyType { WHITE, BLACK };
 class PianoKey : public Rectangle {
 private:
     KeyType type;
-    int noteID;              // Índice MIDI o similar
+    int noteID;              
     bool active;
     bool tBlanca;
     int delay;

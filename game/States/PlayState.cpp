@@ -19,7 +19,7 @@ void PlayState::enter() {
 }
 
 void PlayState::exit() {
-    // Liberar recursos específicos del estado
+    // Liberar recursos
 }
 
 void PlayState::update(float deltaTime) {

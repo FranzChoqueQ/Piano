@@ -8,7 +8,6 @@ BotonRectangular::BotonRectangular(int x, int y, int w, int h,
       colorHover(colorHover) {}
 
 void BotonRectangular::render(SDL_Renderer* renderer) const {
-    // No necesitamos override realmente, pero lo dejamos por claridad
     Rectangle::render(renderer);
 }
 

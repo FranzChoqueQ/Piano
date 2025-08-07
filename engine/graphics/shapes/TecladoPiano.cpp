@@ -29,13 +29,13 @@ TecladoPiano::TecladoPiano(int xOffset, int yOffset) {
         sounds.push_back(sound);
     }
 
-    // 🎹 Dimensiones base
-    const int whiteKeyWidth  = 32;    // 25 blancas = 800 px
+    // Dimensiones base
+    const int whiteKeyWidth  = 32; 
     const int whiteKeyHeight = 200;
     const int blackKeyWidth  = 20;
     const int blackKeyHeight = 120;
 
-    // 🎶 Patrones para teclas negras (0: no hay, 1: hay tecla negra entre blancas)
+    // Patrones para teclas negras (0: no hay, 1: hay tecla negra entre blancas)
     const int blackKeyMap[25] = {
         1,1,0,1,1,1,0,1,1,0,1,1,1,0,1,1,0,1,1,1,0,1,1,0,0
         // Posiciones relativas donde hay tecla negra: C, C#, D, D#, E, F...
@@ -46,20 +46,16 @@ TecladoPiano::TecladoPiano(int xOffset, int yOffset) {
 
     int noteID = 0;
 
-    // 🔲 Crear teclas blancas
+    // Crear teclas blancas
     for (int i = 0; i < 25; ++i) {
         int x = xOffset + i * whiteKeyWidth;
-        /*std::cout << "🟨 BLANCA: ID=" << noteID << " | x=" << x << " y=" << yOffset
-                << " w=" << whiteKeyWidth << " h=" << whiteKeyHeight << std::endl;*/
         teclasBlancas.push_back(PianoKey(x, yOffset, whiteKeyWidth, whiteKeyHeight, whiteColor, KeyType::WHITE, noteID++));
     }
 
-    // ⬛ Crear teclas negras
+    // Crear teclas negras
     for (int i = 0; i < 25; ++i) {
         if (blackKeyMap[i]) {
             int x = xOffset + (i * whiteKeyWidth) + (whiteKeyWidth - blackKeyWidth / 2);
-            /*std::cout << "⬛ NEGRA: ID=" << noteID << " | x=" << x << " y=" << yOffset
-                    << " w=" << blackKeyWidth << " h=" << blackKeyHeight << std::endl;*/
             teclasNegras.push_back(PianoKey(x, yOffset, blackKeyWidth, blackKeyHeight, blackColor, KeyType::BLACK, noteID++));
         }
     }
@@ -81,13 +77,11 @@ void TecladoPiano::update(){
 }
 
 void TecladoPiano::render(SDL_Renderer* renderer) const {
-    //std::cout << "\n=== RENDERIZANDO TECLADO ===" << std::endl;
-    // ⚪ Dibujar teclas blancas primero
     for (const auto& key : teclasBlancas) {
         key.renderPianoKey(renderer);
     }
 
-    // ⚫ Luego dibujar negras por encima
+    // Luego dibujar negras por encima
     for (const auto& key : teclasNegras) {
         key.renderPianoKey(renderer);
     }
@@ -144,13 +138,11 @@ void loadSounds() {
 
 
 void TecladoPiano::handleEvents(const EventHandler& event) {
-
     for (auto& key : teclasBlancas) {
         if (key.isClicked(event)) {
             key.setActive(true, true);
-            std::cout << "🎵 Click sobre B: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
+            std::cout << " Click sobre B: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
             int noteID = key.getNoteID();
-            //Mix_PlayChannel(-1, sounds[noteID], 0);
             if (noteID >= 0 && noteID < sounds.size()) {
                 Mix_PlayChannel(-1, sounds[noteID], 0);
             }
@@ -161,7 +153,7 @@ void TecladoPiano::handleEvents(const EventHandler& event) {
     for (auto& key : teclasNegras) {
         if (key.isClicked(event)) {
             key.setActive(true, false);
-            std::cout << "🎵 Click sobre N: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
+            std::cout << "Click sobre N: " << getNoteNameFromOffset(key.getNoteID()) << std::endl;
             int noteID = key.getNoteID();
             if (noteID >= 0 && noteID < sounds.size()) {
                 Mix_PlayChannel(-1, sounds[noteID], 0);
@@ -170,7 +162,7 @@ void TecladoPiano::handleEvents(const EventHandler& event) {
         }
     }
 
-    // 🎹 Entrada desde teclado físico
+    // Entrada desde teclado físico
     for (const auto& [scancode, noteID] : keyToNoteID) {
         //std::cout << "El resultado es: " << event.isKeyPressed(scancode) << std::endl;
         if (event.isKeyPressed(scancode)) {

@@ -5,7 +5,6 @@ Rectangle::Rectangle(int x, int y, int w, int h, SDL_Color color) : rect{x,y,w,h
 }
 
 Rectangle::~Rectangle() {
-    // Implementación vacía pero necesaria
 }
 
 void Rectangle::render(SDL_Renderer* renderer) const {
@@ -14,7 +13,6 @@ void Rectangle::render(SDL_Renderer* renderer) const {
 }
 
 void Rectangle::handleEvent(EventHandler& event) {
-    // Implementación base vacía o común para todos los rectángulos
 }
 
 bool Rectangle::isMouseOver(const EventHandler& event) const {

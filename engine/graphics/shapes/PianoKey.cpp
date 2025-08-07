@@ -28,7 +28,7 @@ void PianoKey::update() {
 void PianoKey::renderPianoKey(SDL_Renderer* renderer) const{
     Rectangle::render(renderer);  // Dibuja el rectángulo base
     
-    // Opcional: contorno
+    // Contorno
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderDrawRect(renderer, &rect);
 }

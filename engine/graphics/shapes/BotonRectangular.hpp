@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Rectangle.hpp"
-//#include <functional>
 
 class BotonRectangular : public Rectangle {
 public:
@@ -16,5 +15,4 @@ public:
 private:
     SDL_Color colorNormal;
     SDL_Color colorHover;
-    //std::function<void()> onClick;
 };
